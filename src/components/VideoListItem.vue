@@ -35,6 +35,9 @@ export default {
 </script>
 
 <style>
+ul {
+  list-style: none;
+}
 li {
   cursor: pointer;
 }
