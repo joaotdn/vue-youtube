@@ -1,12 +1,17 @@
 <template>
   <div>
-    <input type="search" />
+    <input type="search" @input="onInput" />
   </div>
 </template>
 
 <script>
 export default {
-  name: "SearchBar"
+  name: "SearchBar",
+  methods: {
+    onInput(e) {
+      console.log(e.target.value);
+    }
+  }
 };
 </script>
 
