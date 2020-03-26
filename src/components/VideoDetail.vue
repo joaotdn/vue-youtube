@@ -1,8 +1,12 @@
 <template>
   <div v-if="video">
-    <h4>{{ video.snippet.title }}</h4>
-    <iframe :src="videoUrl"></iframe>
-    <p>{{ video.snippet.description }}</p>
+    <div>
+      <iframe :src="videoUrl" />
+    </div>
+    <div>
+      <h4>{{ video.snippet.title }}</h4>
+      <p>{{ video.snippet.description }}</p>
+    </div>
   </div>
 </template>
 
