@@ -1,5 +1,5 @@
 <template>
-  <li>
+  <li @click="onVideoSelect">
     <img :src="thumb" :alt="description" :width="width" :height="height" />
     {{ title }}
   </li>
@@ -25,6 +25,17 @@ export default {
     height() {
       return this.video.snippet.thumbnails.default.height;
     }
+  },
+  methods: {
+    onVideoSelect() {
+      this.$emit("videoSelect", this.video);
+    }
   }
 };
 </script>
+
+<style>
+li {
+  cursor: pointer;
+}
+</style>
