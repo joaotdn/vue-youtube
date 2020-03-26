@@ -2,7 +2,6 @@
   <div>
     <SearchBar @termChange="onTermChange" />
     <VideoList :videos="videos" />
-    {{ videos.length }}
   </div>
 </template>
 
